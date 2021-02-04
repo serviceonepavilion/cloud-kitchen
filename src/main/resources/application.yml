@@ -1,0 +1,40 @@
+spring:
+  jpa:
+    show-sql: true
+    open-in-view: false
+    database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
+    hibernate:
+      ddl-auto: update
+      dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+    properties:
+      hibernate.jdbc.batch_size: 20
+      hibernate.cache.use_query_cache: false
+      hibernate.cache.use_second_level_cache: false
+      hibernate.cache.use_structured_entries: false
+      hibernate.cache.use_minimal_puts: false
+      hibernate.enable_lazy_load_no_trans: true
+  datasource:
+    url: jdbc:mysql://localhost:3306/cloud_kitchen?allowPublicKeyRetrieval=true&useSSL=false&serverTimezone=UTC&useLegacyDatetimeCode=false
+    username: root
+    password: shivam
+    driverClassName: com.mysql.cj.jdbc.Driver
+
+jwt:
+  expiration:
+    time: 1000000
+
+    #logging:
+#  level:
+#    root: error
+#    org.hibernate: error
+#    org.springframework: error
+#    org.springframework.web: debug
+#    com.serviceonepavilion: debug
+#  pattern:
+#    console: '%d{yyyy-MM-dd HH:mm:ss} - %msg%n'
+#    file: '%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{36} - %msg%n'
+
+
+#  file:
+#    path: /home/sun/Downloads/cldkthn/application
+    
